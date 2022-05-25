@@ -8,7 +8,7 @@ Import and then call with the NFT's metadata as the arg
 ```typescript
 import analyser from 'rarity-analyser'
 
-analyser(metadata)
+analyser.analyse(metadata)
 ```
 
 ### Interfaces

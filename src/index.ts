@@ -1,3 +1,3 @@
-import { analyse } from './analysis'
+import { analyse as _analyse } from './analysis'
 
-export default analyse
+export const analyse = _analyse
