@@ -1,34 +1,22 @@
 {
-  "name": "rarity-graphql",
+  "name": "rarity-analyser",
   "version": "1.0.0",
   "main": "src/index.ts",
-  "author": "mikkoo.eth",
+  "author": "Shahul Hameed",
   "license": "MIT",
   "private": false,
   "scripts": {
     "build": "yarn tsc",
-    "start": "node dist/src/index.js",
-    "dev": "yarn ts-node-dev src/index.ts",
-    "analyse": "yarn ts-node src/scripts/analyse.ts",
-    "seed": "yarn ts-node src/scripts/seed.ts",
     "lint": "yarn eslint . --ext .js,.ts",
     "format": "yarn prettier --write . --no-semi --single-quote"
   },
   "dependencies": {
-    "@graphql-tools/schema": "^8.2.0",
-    "apollo-server": "^3.3.0",
-    "dotenv": "^10.0.0",
-    "graphql": "^15.5.3",
-    "lodash.orderby": "^4.6.0",
-    "micro": "^9.3.4",
-    "mongoose": "^6.0.5",
-    "typescript": "^4.4.3",
-    "yargs": "^17.1.1-candidate.0"
+    "lodash": "^4.17.21",
+    "typescript": "^4.4.3"
   },
   "devDependencies": {
-    "@types/lodash.orderby": "^4.6.6",
+    "@types/lodash": "^4.14.182",
     "@types/node": "^16.7.13",
-    "@types/yargs": "^17.0.2",
     "@typescript-eslint/eslint-plugin": "^4.31.1",
     "@typescript-eslint/parser": "^4.31.1",
     "eslint": "^7.32.0",
@@ -36,5 +24,14 @@
     "prettier": "^2.4.1",
     "ts-node": "^10.2.1",
     "ts-node-dev": "^1.1.8"
-  }
+  },
+  "description": "Generates rarity data for an NFT collection.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shahthepro/rarity-analyser.git"
+  },
+  "bugs": {
+    "url": "https://github.com/shahthepro/rarity-analyser/issues"
+  },
+  "homepage": "https://github.com/shahthepro/rarity-analyser#readme"
 }
