@@ -49,3 +49,7 @@ interface Attribute {
   count: number // Count of how many tokens have the value of this attribute
 }
 ```
+
+### TODO
+- Use Github Actions to build & publish package on push
+- Get rid of global config file and make it an arg to the `analyse` function

@@ -1,7 +1,7 @@
 {
   "name": "rarity-analyser",
-  "version": "1.0.0",
-  "main": "index.ts",
+  "version": "1.0.1",
+  "main": "dist/index.js",
   "author": "Shahul Hameed",
   "license": "MIT",
   "private": false,
