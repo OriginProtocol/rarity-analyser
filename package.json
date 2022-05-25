@@ -1,12 +1,12 @@
 {
   "name": "rarity-analyser",
-  "version": "1.0.2",
-  "main": "dist/index.js",
+  "version": "1.0.3",
+  "main": "dist/src/index.js",
   "author": "Shahul Hameed",
   "license": "MIT",
   "private": false,
   "scripts": {
-    "build": "yarn tsc",
+    "build": "rm -rf dist && yarn tsc",
     "lint": "yarn eslint . --ext .js,.ts",
     "format": "yarn prettier --write . --no-semi --single-quote"
   },
