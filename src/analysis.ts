@@ -128,6 +128,13 @@ const preprocess = (
       attributesFieldName ?? 'attributes'
     ] as Attribute[]
 
+    if (!attributes?.length) {
+      return {
+        token,
+        attributes: []
+      }
+    }
+
     if (!('trait_type' in attributes[0]))
       throw new Error('Attribute trait type missing')
 
@@ -142,6 +149,13 @@ const preprocess = (
   if (attributesFieldName && attributesFieldName !== 'attributes') {
     const mapped = filtered.map((token) => {
       const attributes = token[attributesFieldName] as Attribute[]
+
+      if (!attributes?.length) {
+        return {
+          token,
+          attributes: []
+        }
+      }
 
       if (!('trait_type' in attributes[0]))
         throw new Error('Attribute trait_type missing')
