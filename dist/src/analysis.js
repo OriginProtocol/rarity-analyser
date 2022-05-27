@@ -62,6 +62,12 @@ const preprocess = (tokens) => {
     // Filter possible empty objects, ie. trait_type and value are missing
     const filtered = tokens.map((token) => {
         const attributes = token[attributesFieldName ?? 'attributes'];
+        if (!attributes?.length) {
+            return {
+                ...token,
+                attributes: []
+            };
+        }
         if (!('trait_type' in attributes[0]))
             throw new Error('Attribute trait type missing');
         const filteredAttributes = attributes.filter((a) => Object.keys(a).length > 0);
@@ -72,6 +78,12 @@ const preprocess = (tokens) => {
     if (attributesFieldName && attributesFieldName !== 'attributes') {
         const mapped = filtered.map((token) => {
             const attributes = token[attributesFieldName];
+            if (!attributes?.length) {
+                return {
+                    ...token,
+                    attributes: []
+                };
+            }
             if (!('trait_type' in attributes[0]))
                 throw new Error('Attribute trait_type missing');
             const newToken = {

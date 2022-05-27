@@ -130,7 +130,7 @@ const preprocess = (
 
     if (!attributes?.length) {
       return {
-        token,
+        ...token,
         attributes: []
       }
     }
@@ -152,7 +152,7 @@ const preprocess = (
 
       if (!attributes?.length) {
         return {
-          token,
+          ...token,
           attributes: []
         }
       }
